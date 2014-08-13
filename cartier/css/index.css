@@ -1,0 +1,71 @@
+*{margin: 0;padding: 0;}
+li{list-style-type: none;}
+a{text-decoration: none;}
+
+
+#page{background-image: url("../images/bg-user.jpg");width: 100%;height: 1244px;}
+#header{width: 100%;height: 130px;border-bottom: 1px solid #4d4d4d;}
+#main{width: 980px;min-height: 400px;margin: 0 auto;}
+#footer{width: 100%;height: 93px;border-top: 1px solid #4d4d4d;}
+
+
+
+/*header*/
+#header1{width: 100%;height: 24px;}
+#headerLeft{display: block;width: 190px;height: 20px;float: left;margin-left: 15px;padding:4px 24px 0 24px;}
+#headerRight{display: block;width: 70px;height: 24px;float: right;margin-right: 15px;}
+#headerLeft a{display: inline-block;font-size: 12px;line-height: 24px;color: #a0a0a0;font-family: 微软雅黑;}
+#headerLeft a:hover{color: #FFF;}
+#headerRight a{display: inline-block;font-size: 12px;line-height: 24px;font-family: 微软雅黑;margin-top: 2px;color: #999;}
+#headerRight a:hover{color: #ddd;}
+
+#name{width: 100%;height: 65px;display: block;margin-top: 6px;}
+.namePh{width: 233px;height: 65px;display: block;margin: 0 auto;background-image: url("images/name.png");background-repeat: no-repeat;}
+.menu{width: 240px;height: 26px;margin: 0 auto;padding-left: 30px;}
+.menu a{display: inline-block;line-height: 26px;font-size: 12px;font-family: 微软雅黑;margin-top: 10px;color: #999;margin-right: 50px;}
+.menu a:hover{color: #f9f9f9;}
+
+
+/*main*/
+.title{width: 980px;height: 49px;margin-top: 22px;}
+.title h1{color: #fafafa;font-size: 26px;text-align: center;}
+.content{width: 978px;display: inline-block; border: 1px solid #4d4d4d;margin-bottom: 20px;}
+.co1{width: 430px;height: 309px;padding:0 29px 0 29px;display: block;float: left;margin-top: 14px;}
+.co2{width: 430px;padding:0 29px 0 29px;display:inline-block;float: right;border-left: 1px	dotted #595959;margin-top: 14px;}
+.coh2{text-align: center;font-size: 15px;margin-bottom: 10px;color: #f1f1f1;}
+.cop{text-align: center;font-size: 13px;padding-bottom: 30px;border-bottom: 1px solid #595959;margin-bottom: 15px;color: #f1f1f1;}
+
+/*登录*/
+.wrapper{height: 167px;}
+.email{height: 53px;margin-top: 25px;}
+.label{display: inline-block;font-size: 12px;color: #FFF;font-weight: bold;}
+.input{margin-top: 3px; width: 100%;height: 28px; display:inline-block;background-color:#1d1d1d;font-size: 12px;line-height: 12px; color: #FFF;border: 1px solid #595959;}
+.password{margin-top: 15px;border-bottom: 1px solid	#595959;}
+.wangji{font-size: 13px;color: #f3f3f3;display: inline-block;float:right;padding-right: 10px;margin-top: -3px;}
+.mima{display: block;background-image: url("images/arrows-red.png");height: 22px;background-repeat: no-repeat;margin-left: 350px;margin-top: 10px;}
+.submit{background-image: url("images/arrows-red.png");background-position: 20px 14px;background-repeat: no-repeat; color: #FFF;width: 33px;height: 15px;background-color: #b10000;font-weight: bold; cursor: pointer;padding:9px 36px 9px 45px;margin: 20px auto;font-size: 12px;}
+.submit:hover{background-color: #dd0000;}
+
+
+/*注册*/
+.co2P1{font-size: 13px;color: #f1f1f1;text-align: center;padding-bottom:13px;}
+.co2p2{font-size: 6px;font-weight: bold;color: #f1f1f1;text-align: center;}
+
+.red-wrapper{padding-top: 20px;}
+.c-form-radio{height: 44px;border: 1px solid #ccc;}
+.form-50{width: 210px;margin: 10px 10px 10px 0;height: 51px;float: left;}
+.form-last{margin-right: 0px;}
+.form-100{width: 430px;display: inline-block;margin-top: 22px;}
+
+.form-30{width: 142px;display: inline-block;float: left;margin-top: 20px;}
+.YZPH{float: left; width: 110px;height: 50px;display: inline-block;margin-top: 32px;margin-left: 15px;background-repeat: no-repeat; background-image: url("images/yanzhengma.png");}
+.yanzheng{height: 70px;}
+.yanzhengP{display: inline-block;float: left;margin-top: 43px;margin-left: 5px;font-size: 12px;color: #FFF;}
+.description{width: 400px;height: 50px;font-size: 12px;color: #a9a9a9; margin-top: 20px;padding-left: 10px;border-bottom: 1px solid #595959;padding-right: 20px;}
+.check{height: 30px;padding-top: 5px;background-color: red;margin-top:15px;}
+
+
+.mainFoot{width: 980px;height: 24px;text-align: center;}
+.mainFoot span{display: inline-block;color: #FFF;font-size: 12px;}
+.mainFoot a{display: inline-block;color: #90a1a3;}
+.mainFoot a:hover{color: #f7f7f7;}
