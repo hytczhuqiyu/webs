@@ -1,0 +1,40 @@
+*{margin: 0;padding:0;}
+a{text-decoration: none;}
+li{list-style-type: none;}
+
+
+body{background-image: url("../images/3.jpg");}
+
+.wrap{width: 1000px;height: 100%;margin: 0 auto;}
+#QQ{width: 278px;height: 480px;margin-top: 60;float: left;}
+
+/*会话*/
+.first{display: none;height: 485px}
+.Top{width: 100%;height: 45px;border-top-left-radius: 6px;border-top-right-radius: 6px;background-color: #333;text-align: center;}
+.content{width: 100%;overflow: auto;min-height: 200px;max-height: 440px;}
+.Footer{width: 100%;height: 50px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;background-color: #333;color: #FFF;}
+
+.Top span{line-height: 45px;font-size: 22px;color: #FFF;font-weight: 400;}
+
+.friend{width: 100%;height: 62px;background:linear-gradient(#fff,#f1f1f1);}
+.PH{width: 40px;height: 40px;display: inline-block;margin: 11px;float: left;}
+.friend p{width: 180px;height: 20px;float: left;margin-left: 5px;margin-top: 13px;}
+.friend p span{font-size: 12px;color: #aaa;}
+
+
+/*发现*/
+.third{height: 485px;}
+.fxLi{width: 93px;height: 93px;text-align: center;}
+.fxLi span{display: block;width: 55px;height: 55px;background-image: url("../images/fx111.png");margin-left: 19px;}
+
+
+
+
+/*Footer*/
+.XhS{width: 67px;height: 50px;float: left;border-left: 1px solid rgb(85,85,85);background-color: rgb(73,73,73); border-right: 1px solid rgb(34,34,34);font-size: 12px;line-height: 16px;color: white;text-align: center;cursor: pointer;}
+.XhS1{border-bottom-left-radius:6px;}
+.XhS4{border-bottom-right-radius:6px;}
+.active{background-color: rgb(51,51,51);}
+
+.icon{display: block;width:34px;height: 34px;margin-left: 18px;}
+.aaa{width: 34px;height: 34px;}
