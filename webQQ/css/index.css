@@ -5,11 +5,11 @@ li{list-style-type: none;}
 
 body{background-image: url("../images/3.jpg");}
 
-.wrap{width: 1000px;height: 100%;margin: 0 auto;}
+.wrap{width: 1000px;height: 100%;margin: 0 auto;position: relative;}
 #QQ{width: 278px;height: 480px;margin-top: 60;float: left;}
 
 /*会话*/
-.first{display: none;height: 485px}
+.first{display: none;height: 465px}
 .Top{width: 100%;height: 45px;border-top-left-radius: 6px;border-top-right-radius: 6px;background-color: #333;text-align: center;}
 .content{width: 100%;overflow: auto;height: 440px;}
 .Footer{width: 100%;height: 50px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;background-color: #333;color: #FFF;}
@@ -93,10 +93,21 @@ body{background-image: url("../images/3.jpg");}
 
 
 /*chat*/
-.chatArea{width: 700px;float: right;margin-top: 60px;}
+.chatArea{width: 700px;position:absolute;top: 60px;left: 290px;display: block;}
 .chatheader{width: 100%;height: 45px;background-color: #000;border-top-left-radius: 8px;border-top-right-radius: 8px;}
-.chatcontent{width: 100%;min-height:200px;height: 385px; }
+.chatcontent{width: 100%;min-height:200px;height: 425px; opacity: 0.4;background-color: #000;}
 
-.chatFooter{width: 100%;height: 50px;background-color: #000;border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;}
+.chatFooter{width: 100%;height: 50px;background-color: #444;border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;}
 
-.chatHfirst{display: block;width: 73px;height: 33px;float: left;border: 1px solid #2c2727;margin-left: 15px;margin-top: 5px;border-radius: 5px;}
+.chatHfirst{cursor: pointer; background-image: url("../images/pannel-arrow-down1.png");background-position: 25px 8px; background-repeat: no-repeat; display: block;width: 73px;height: 33px;float: left;border: 1px solid #2c2727;margin-left: 15px;margin-top: 5px;border-radius: 5px;}
+.chatName{float: left; width: 460px;color: #FFF;font-size: 16px;text-align: center;line-height: 45px;}
+.chatthird{color: #FFF;text-align: center;line-height: 33px; cursor: pointer; display: block;width: 73px;height: 33px;float:right; border: 1px solid #2c2727;margin-right: 15px;margin-top: 5px;border-radius: 5px;}
+.face{cursor: pointer; width: 40px;height: 40px;display: block;float: left;margin:5px 10px 5px 10px;background-image: url("../images/chat_bottombar_icon_face1.png");background-repeat: no-repeat;background-position: 8px 5px;}
+.chattext{width: 560px;margin-top: 7px;background-color: #f9f9f9;max-height: 80px;overflow: hidden;font-size: 15px;border-radius: 5px;}
+.dianji{width: 48px;height: 36px;display: block;background-color: rgb(87,146,189);color: #FFF;border-radius: 5px;font-size: 14px;line-height: 36px;text-align: center;float: right;margin-right: 15px;margin-top: 7px;}
+.activing{display: block;}
+
+
+
+
+.xx{width: 700px;height: 480px;border:1px solid red;position: absolute;top: 60px;left: 530px;display: none;}
