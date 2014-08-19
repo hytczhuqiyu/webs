@@ -1,4 +1,50 @@
 $(function(){
+	$(document).on("click",".dianji",function(){
+		var ssss=$(this).attr("ss");
+		var tt=$("#text"+ssss).val();
+		var liaotian="";
+		liaotian += ' <div class="chatxx">我：'+tt+'</div>';
+		$(this).parent().parent().find(".chatcontent").append(liaotian);
+		$("#text"+ssss).val("");
+			
+	});
+	$(document).on("click",".chathide",function(){
+		var zxid=$(this).attr("ppid");
+		var zxmz=$(this).attr("mz");
+		var yrned=$(this).attr("yrned");
+		if(yrned==0){
+			$(this).parent().parent().hide();
+			var hide="";
+			hide +='  <div id="yc'+zxid+'" class="suoxiao" sxid="pengyouId" sxmz="'+zxmz+'" zxid="'+zxid+'" orc="0">与'+zxmz+'聊天中</div>   ';
+			$(".ycq").append(hide);
+			$(this).attr("yrned","1");
+		}else{
+			$(this).parent().parent().hide();
+		};
+		
+	});
+
+	$(document).on("click",".suoxiao",function(){
+		var zxid=$(this).attr("zxid");
+		var orc=$(this).attr("orc");
+		if(orc==0){
+			$("#chat"+zxid).show();
+			$(this).attr("orc","1")
+		}
+		else{
+			$("#chat"+zxid).hide();
+			$(this).attr("orc","0");
+		}
+	});
+
+	$(document).on("click",".chatclose",function(){
+			$(this).parent().parent().remove();
+			var ppid=$(this).attr("ppid");
+			$("#yc"+ppid).remove();
+			$("#pengyouA"+ppid).attr("zd","0");
+	});
+
+
 	$(".XhS").click(function(){
 		$(".XHS").removeClass("active");
 		$(this).addClass("active");
@@ -32,7 +78,8 @@ $(function(){
 			html += '			<div class="chatheader">';
 			html += '				<div class="chatHfirst"></div>';
 			html += '				<div class="chatName">'+pengyouName+'</div>';
-			html += '				<div pengyouAId="pengyouA'+pengyouId+'" chatDivID="'+chatDivID+'" class="chatclose">关闭</div>';
+			html += '				<div class="chathide" mz="'+pengyouName+'" ppid="'+pengyouId+'" yrned="0">最小化</div>';
+			html += '				<div pengyouAId="pengyouA'+pengyouId+'" chatDivID="'+chatDivID+'" class="chatclose" ppid="'+pengyouId+'">关闭</div>';
 			html += '			</div>';
 			html += '			<div class="chatcontent"></div>';
 			html += '			<div class="chatFooter">';
@@ -49,16 +96,14 @@ $(function(){
 	
 
 			var huihua="";
-			huihua +='     <ul>';
-			huihua +='			<li class="friend" friendID="1005" friendName="陈杰">';
+			huihua +='			<li class="friend" id="friend1">';
 			huihua +='				<div class="PH">';
 			huihua +='					<img src="images/lol/l'+phid+'.png">';
 			huihua +='              </div> ';
 			huihua +='		        <p>'+pengyouName+'</p>';
 			huihua +='		  	 </li>';
-			huihua +='	    </ul>';
 		
-			$(".content").prepend(huihua);
+			$(".contentUl").prepend(huihua);
 			$(".chatArea").draggable();
 		}else{
 			$(".chatArea").css("z-index","15");
@@ -70,25 +115,24 @@ $(function(){
 			$(this).css("z-index","16");
 		});
 
-
-		$(".chatclose").click(function(){
-			$(this).parent().parent().remove();
-			var pengyouAid=$(this).attr("pengyouAId");
-			$("#"+pengyouAid).attr("zd",0);
-
-		});
-
-		$(".dianji").click(function(){
+	/*	$(".dianji").click(function(){
 			var tt=$("#text"+pengyouId).val();
-			alert(tt);
+			alert("3");
 			var liaotian="";
 			liaotian += ' <div class="chatxx">我：'+tt+'</div>';
 			$(this).parent().parent().find(".chatcontent").append(liaotian);
-			document.getElementById("text"+pengyouId).value="";
-		});
+			
+		});*/
+
+
+/*		$(".chathide").click(function(){
+			$(this).parent().parent().hide();
+			var hide="";
+			hide +='  <div class="suoxiao" sxid="pengyouId">与'+pengyouName+'聊天中</div>   ';
+			$(".ycq").append(hide);
+		});*/
 	});
-
-
+	
 	$(".span32").click(function(){
 		$("*").find(".xx").show();
 
