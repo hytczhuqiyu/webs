@@ -2,7 +2,6 @@
 a{text-decoration: none;}
 li{list-style-type: none;}
 
-
 body{background-image: url("../images/3.jpg");}
 
 .wrap{width: 1000px;height: 100%;margin: 0 auto;position: relative;}
@@ -11,7 +10,7 @@ body{background-image: url("../images/3.jpg");}
 /*会话*/
 .first{display: none;height: 465px}
 .Top{width: 100%;height: 45px;border-top-left-radius: 6px;border-top-right-radius: 6px;background-color: #333;text-align: center;}
-.content{width: 100%;overflow: auto;height: 440px;}
+.content{width: 100%;overflow: auto;height: 440px;background-color: #FFF;}
 .Footer{width: 100%;height: 50px;border-bottom-left-radius: 6px;border-bottom-right-radius: 6px;background-color: #333;color: #FFF;}
 
 .Top span{line-height: 45px;font-size: 22px;color: #FFF;font-weight: 400;}
@@ -48,6 +47,7 @@ body{background-image: url("../images/3.jpg");}
 /*发现*/
 .third{height: 485px;display: none;}
 .thirdSpc{background-color: #FFF;}
+.content1{width: 100%;overflow: auto;height: 440px;background-color: #FFF;}
 .fxLi{cursor: pointer; border: 1px solid #eceef2;border-bottom-color: #c1c7d2;border-right-color: #c1c7d2; width: 90px;height: 90px;text-align: center; background-image: linear-gradient(#e7e8eb,#dadbe0 50%,#c7cbd2 75%,#d3d6db 95%,#d3d6dd);padding-top: 10px;float: left;}
 .fxLi span{display: block;width: 55px;height: 55px;display: block; margin-left: 19px;margin-bottom: 6px;}
 .fxLi a{font-size: 13px;}
@@ -109,13 +109,13 @@ body{background-image: url("../images/3.jpg");}
 /*chat*/
 .chatArea{width: 700px;position:absolute;top: 60px;left: 290px;display: block;}
 .chatheader{width: 100%;height: 45px;background-color: #000;border-top-left-radius: 8px;border-top-right-radius: 8px;}
-.chatcontent{width: 100%;min-height:200px;height: 425px; opacity: 0.4;background-color: #000;overflow: auto;}
+.chatcontent{width: 100%;min-height:200px;height: 425px;background-color: #ddd;overflow: auto;}
 
 .chatFooter{width: 100%;height: 50px;background-color: #444;border-bottom-left-radius: 8px;border-bottom-right-radius: 8px;}
 
 .chatHfirst{cursor: pointer; background-image: url("../images/pannel-arrow-down1.png");background-position: 25px 8px; background-repeat: no-repeat; display: block;width: 73px;height: 33px;float: left;border: 1px solid #2c2727;margin-left: 15px;margin-top: 5px;border-radius: 5px;}
 .chatName{float: left; width: 460px;color: #FFF;font-size: 16px;text-align: center;line-height: 45px;}
-.chatthird{color: #FFF;text-align: center;line-height: 33px; cursor: pointer; display: block;width: 73px;height: 33px;float:right; border: 1px solid #2c2727;margin-right: 15px;margin-top: 5px;border-radius: 5px;}
+.chatclose{color: #FFF;text-align: center;line-height: 33px; cursor: pointer; display: block;width: 73px;height: 33px;float:right; border: 1px solid #2c2727;margin-right: 15px;margin-top: 5px;border-radius: 5px;}
 .face{cursor: pointer; width: 40px;height: 40px;display: block;float: left;margin:5px 10px 5px 10px;background-image: url("../images/chat_bottombar_icon_face1.png");background-repeat: no-repeat;background-position: 8px 5px;}
 .chattext{width: 560px;margin-top: 7px;background-color: #f9f9f9;max-height: 80px;overflow: hidden;font-size: 15px;border-radius: 5px;}
 .dianji{width: 48px;height: 36px;display: block;background-color: rgb(87,146,189);color: #FFF;border-radius: 5px;font-size: 14px;line-height: 36px;text-align: center;float: right;margin-right: 15px;margin-top: 7px;}

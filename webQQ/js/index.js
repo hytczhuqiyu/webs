@@ -20,41 +20,74 @@ $(function(){
 		}
 	});
 
-	$(".friend").click(function(){
-		var friendId=$(this).attr("friendID");
-		var friendName=$(this).attr("friendName")
+	$(".pengyou").click(function(){
+		var pengyouId=$(this).attr("pengyouId");
+		var pengyouName=$(this).attr("pengyouName");
+		var chatDivID="chat" + pengyouId;
 
-		var html="";
-		html += '		<div class="chatArea" >';
-		html += '			<div class="chatheader">';
-		html += '				<div class="chatHfirst"></div>';
-		html += '				<div class="chatName">'+friendName+'</div>';
-		html += '				<div class="chatthird">关闭</div>';
-		html += '			</div>';
-		html += '			<div class="chatcontent"></div>';
-		html += '			<div class="chatFooter">';
-		html += '				<div class="face"></div>';
-		html += '				<textarea class="chattext" id="aaaaa"></textarea>';
-		html += '				<div class="dianji">发送</div>';
-		html += '			</div>';
-		html += '		</div>';
+		var zd=$(this).attr("zd");
+		if(zd==0){
+			var html="";
+			html += '		<div class="chatArea" id="'+chatDivID+'">';
+			html += '			<div class="chatheader">';
+			html += '				<div class="chatHfirst"></div>';
+			html += '				<div class="chatName">'+pengyouName+'</div>';
+			html += '				<div pengyouAId="pengyouA'+pengyouId+'" chatDivID="'+chatDivID+'" class="chatclose">关闭</div>';
+			html += '			</div>';
+			html += '			<div class="chatcontent"></div>';
+			html += '			<div class="chatFooter">';
+			html += '				<div class="face"></div>';
+			html += '				<textarea class="chattext" id="text'+pengyouId+'"></textarea>';
+			html += '				<div class="dianji" ss="'+pengyouId+'">发送</div>';
+			html += '			</div>';
+			html += '		</div>';
 
-		$(".wrap").append(html);
+			$(".wrap").append(html);
+			$(this).attr("zd",1);
 
-		$(".chatthird").click(function(){
+			var phid=$(this).attr("phid");
+	
+
+			var huihua="";
+			huihua +='     <ul>';
+			huihua +='			<li class="friend" friendID="1005" friendName="陈杰">';
+			huihua +='				<div class="PH">';
+			huihua +='					<img src="images/lol/l'+phid+'.png">';
+			huihua +='              </div> ';
+			huihua +='		        <p>'+pengyouName+'</p>';
+			huihua +='		  	 </li>';
+			huihua +='	    </ul>';
+		
+			$(".content").prepend(huihua);
+			$(".chatArea").draggable();
+		}else{
+			$(".chatArea").css("z-index","15");
+			$("#"+chatDivID).css("z-index","16");
+		};
+
+		$(".chatArea").click(function(){
+			$(".chatArea").css("z-index","15");
+			$(this).css("z-index","16");
+		});
+
+
+		$(".chatclose").click(function(){
 			$(this).parent().parent().remove();
+			var pengyouAid=$(this).attr("pengyouAId");
+			$("#"+pengyouAid).attr("zd",0);
+
 		});
 
 		$(".dianji").click(function(){
-			var tt=document.getElementById("aaaaa").value;
+			var tt=$("#text"+pengyouId).val();
+			alert(tt);
 			var liaotian="";
 			liaotian += ' <div class="chatxx">我：'+tt+'</div>';
-			$(".chatcontent").append(liaotian);
-			document.getElementById("aaaaa").value="";
+			$(this).parent().parent().find(".chatcontent").append(liaotian);
+			document.getElementById("text"+pengyouId).value="";
 		});
-
-
 	});
+
 
 	$(".span32").click(function(){
 		$("*").find(".xx").show();
