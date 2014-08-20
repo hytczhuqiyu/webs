@@ -1,13 +1,16 @@
 $(function(){
+	/*发送消息*/
 	$(document).on("click",".dianji",function(){
 		var ssss=$(this).attr("ss");
 		var tt=$("#text"+ssss).val();
+		$("#lt"+ssss).html(tt);
 		var liaotian="";
 		liaotian += ' <div class="chatxx">我：'+tt+'</div>';
 		$(this).parent().parent().find(".chatcontent").append(liaotian);
 		$("#text"+ssss).val("");
 			
 	});
+	/*最小化*/
 	$(document).on("click",".chathide",function(){
 		var zxid=$(this).attr("ppid");
 		var zxmz=$(this).attr("mz");
@@ -23,7 +26,7 @@ $(function(){
 		};
 		
 	});
-
+	/*放大*/
 	$(document).on("click",".suoxiao",function(){
 		var zxid=$(this).attr("zxid");
 		var orc=$(this).attr("orc");
@@ -36,7 +39,7 @@ $(function(){
 			$(this).attr("orc","0");
 		}
 	});
-
+	/*关闭*/
 	$(document).on("click",".chatclose",function(){
 			$(this).parent().parent().remove();
 			var ppid=$(this).attr("ppid");
@@ -92,18 +95,23 @@ $(function(){
 			$(".wrap").append(html);
 			$(this).attr("zd",1);
 
-			var phid=$(this).attr("phid");
-	
 
-			var huihua="";
-			huihua +='			<li class="friend" id="friend1">';
-			huihua +='				<div class="PH">';
-			huihua +='					<img src="images/lol/l'+phid+'.png">';
-			huihua +='              </div> ';
-			huihua +='		        <p>'+pengyouName+'</p>';
-			huihua +='		  	 </li>';
+			var hh=$(this).attr("hh");
+			if(hh==0){
+				var phid=$(this).attr("phid");	
+				var huihua="";
+				huihua +='			<li class="friend" id="friend1">';
+				huihua +='				<div class="PH">';
+				huihua +='					<img src="images/lol/l'+phid+'.png">';
+				huihua +='              </div> ';
+				huihua +='		        <p>'+pengyouName+'</p>';
+				huihua +='		        <p class="xinxi" id="lt'+pengyouId+'"></p>';
+				huihua +='		  	 </li>';
 		
-			$(".contentUl").prepend(huihua);
+				$(".contentUl").prepend(huihua);
+				$(this).attr("hh",1);
+			};
+			
 			$(".chatArea").draggable();
 		}else{
 			$(".chatArea").css("z-index","15");
@@ -133,7 +141,7 @@ $(function(){
 		});*/
 	});
 	
-	$(".span32").click(function(){
+	$(".group3").click(function(){
 		$("*").find(".xx").show();
 
 	});
@@ -161,6 +169,7 @@ $(function(){
 			$(this).css("background-image",'url("images/up.png")');
 		}
 	});
+	/*背景图*/
 	var p=25;
 	$(".huantu").click(function(){
 		if(p<30){
@@ -216,5 +225,9 @@ $(function(){
 		var zt=$(this).attr("wz");
 		$("*").find(".icon1").css("background-position","-90px 0px");
 		$(this).parent().hide();
+	});
+
+	$(".xxheader-left").click(function(){
+		$(".xx").hide();
 	});
 });
