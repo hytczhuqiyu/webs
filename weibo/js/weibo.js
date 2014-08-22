@@ -138,3 +138,21 @@ function shouPic(){
 	}
 }
 
+
+
+$(function(){
+	$(".input_detail ").click(function(){
+		$(".key").hide();
+		$(".key1").show();
+		return false;
+	});
+	/*$(".input_detail").blur(function(){
+		$(".key").show();
+		$(".key1").hide();
+	});*/
+	$("body").click(function(){
+		$(".key").show();
+		$(".key1").hide();
+	});
+
+})
