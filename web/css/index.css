@@ -1,0 +1,11 @@
+*{margin: 0;padding: 0;}
+
+@font-face {
+  font-family: "Viga";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Viga-Regular"), url("lfIpncSoqrT5_gbJGaWnGQ.woff") format("woff");
+}
+
+#container{width: 600px;height: 30px;margin: 200px auto;}
+.one{display: block;float: left;font-size: 30px;line-height: 30px;text-decoration: none;font-family: "Viga";margin-left: 20px;}
