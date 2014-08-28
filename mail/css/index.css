@@ -1,0 +1,24 @@
+*{margin:0;padding: 0;}
+a{text-decoration:none;}
+li{list-style-type: none;}
+
+
+.All{height: 100%;font: 12px/1.33 Verdana,"宋体",Helvetica,sans-serif;background:url("images/bg_body_right_2.jpg") no-repeat right 0;position: relative;}
+.header{height: 47px;color: #404040;}
+
+.Logo{width: 170px;height: 47px;float: left;}
+.Logo a{display: block;width: 170px;height: 47px;background-image: url("images/logo_1.jpg");}
+.paneFun{position: absolute;height: 21px;top: 15px;right: 24px;z-index: 999;}
+.paneLogin{margin-top: 1px;padding-left: 18px;border-left: 1px solid #BEBEBE;display: inline-block;}
+.mailAdress{color: #000;}
+
+.selectArrow{display:inline-block;background-image: url("images/homeHeaderRight24.png");background-repeat: no-repeat;background-position: -223px 0;width: 7px;height: 4px;margin-bottom: 2px;}
+.panehelp{float: left;}
+.paneHome{background-image: url("images/homeHeaderRight24.png");background-repeat: no-repeat;width: 21px;height: 21px;float: left;margin-right: 29px;}
+.paneset{width: 21px;height: 21px;background-image: url("images/homeHeaderRight24.png");background-repeat: no-repeat;background-position: -49px 0;float: left;margin-right: 29px;}
+.paneAsk{background-image: url("images/homeHeaderRight24.png");background-repeat: no-repeat;width: 21px;height: 21px;background-position: -97px 0;float: left;margin-right: 29px;}
+.bubbleGuide{display: inline-block;width: 18px;height: 21px;background-image: url("images/bubble.gif");position: absolute;left: 1030px;top: 0px;}
+.pane_search{position: absolute;width: 370px;height: 25px;left: 175px;top: 12px;border:1px solid #BBB;}
+.inputTxt{border: none;padding-left: 10px;width: 280px;height: 20px;margin-top: 2px;}
+.btn{width: 49px;height: 25px;background-image: url("images/sg_picskin.gif");background-position: 0 -60px;border: none;float: right;}
+.more{width: 22px;height: 25px;display: inline-block;float: right;background-image: url("images/sg_picskin.gif");background-position: -60px -60px;}
