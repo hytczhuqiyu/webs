@@ -2,7 +2,9 @@
 <head>
 	<title>新浪邮箱</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
 	<meta charset="utf-8">
 </head>
@@ -27,6 +29,114 @@
 				</div>
 			</div>
 		</div>
+		<div id="bdy">
+			<div class="sider">
+				<div class="coreBtn">
+					<ul>
+						<li class="li1">
+							<a href="#" class="li1A">
+								<b class="iconTrans16 "></b>
+								<span>写信</span>
+							</a>
+						</li>
+						<li class="li1">
+							<a href="#" class="li1A">
+								<b class="iconTrans16  shou"></b>
+								<span>收信</span>
+							</a>
+						</li>
+						<li class="li1">
+							<a href="#" class="li1A">
+								<b class="iconTrans16  person"></b>
+								<span>联系人</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="folderlist">
+					<div class="folderlist2">
+						<div class="FolderListBg1">
+							<ul class="mailDirList">
+								<li class="normal">
+									<a href="#" class="default">收件箱</a>
+								</li>
+								<li class="normal">
+									<a href="#" class="default">星标邮件</a>
+								</li>
+								<li class="normal">
+									<a href="#" class="default">草稿夹</a>
+								</li>
+								<li class="normal">
+									<a href="#" class="default">已发送</a>
+								</li>
+								<li class="normal">
+									<a href="#" class="default">订阅邮件</a>
+								</li>
+								<li class="normal lispc">
+									<a href="#" class="default">垃圾邮件</a>
+								</li>
+							</ul>
+							<div class="dx"></div>
+						</div>
+					</div>
+					<div class="folderlist_down">
+						<div class="FolderListBg2">
+							<ul class="mailDirList">
+								<li class="first" >
+									<a href="#" class="ff_nodeopen"></a>
+									<a href="#" class="default2" yon="1">更多分类</a>
+									<span class="option">
+										<a href="#" class="folder_add"></a>
+										<a href="#" class="folder_list"></a>
+										<a href="#" class="filter_manage"></a>
+									</span>
+								</li>
+								<li class="normal">
+									<a href="#" class="default">已删除</a>
+								</li>
+								<li class="normal">
+									<a href="#" class="default">所有邮件</a>
+								</li>
+								<li class="normalLine"></li>
+								<li class="normal">
+									<a href="#" class="default">网站通知</a>
+								</li>
+								<li class="normal lispc">
+									<a href="#" class="default">商讯信息</a>
+								</li>
+							</ul>
+							<div class="dx"></div>
+						</div>
+
+						<div class="FolderListBg2">
+							<ul class="mailDirList">
+								<li class="first" >
+									<a href="#" class="ff_nodeopen"></a>
+									<a href="#" class="default2" yon="1">代收邮箱</a>
+									<span class="option">
+										<a href="#" class="folder_add"></a>
+										<a href="#" class="folder_list"></a>
+									</span>
+								</li>
+								<li class="normal">
+									<a href="#" class=""></a>
+									<a href="#" class="default">邮箱网盘</a>
+								</li>
+								<li class="normal">
+									<a href="#" class="default">新浪微博</a>
+								</li>
+								<li class="normal">
+									<a href="#" class="default">每日悦读</a>
+								</li>
+							</ul>
+							<div class="dx"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 绝对定位 -->
 		<div>
 			<a class="bubbleGuide"></a>
 		</div>
@@ -34,6 +144,102 @@
 			<input class="inputTxt" placeholder="搜索邮件">
 			<div class="more"></div>
 			<input type="button" class="btn" value="搜索">
+		</div>
+		<div class="wui_TipInfoBar">
+			<span>请输入搜索关键字</span>
+		</div>
+	</div>
+	<div class="mb">
+		<!-- 高级搜索 -->
+		<div class="wui_Dialog">
+				<div class="head">
+					<label>高级搜索</label>
+					<span class="close"></span>
+				</div>
+				<div class="body">
+					<div class="layout">
+						<div class="tr">
+							<div class="th">关键字：</div>
+							<div class="txt">
+								<input type="text" class="iptxt">
+							</div>
+						</div>
+						<div class="tr">
+							<div class="th">位置：</div>
+							<div class="check">
+								<div class="td">
+									<input type="checkbox" checked="on" class="chbox">
+									<label>标题</label>
+								</div>
+								<div class="td">
+									<input type="checkbox" checked="on" class="chbox">
+									<label>发件人</label>
+								</div>
+								<div class="td">
+									<input type="checkbox" checked="on" class="chbox">
+									<label>收件人</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="layout spe">
+						<div class="tr">
+							<div class="th">时间：</div>
+							<div class="txt">
+								<select class="settime">
+									<option selected="selected">不限</option>
+									<option>一天内</option>
+									<option>三天内</option>
+									<option>一周内</option>
+									<option>三周内</option>
+									<option>一月内</option>
+									<option>二月内</option>
+									<option>六月内</option>
+									<option>一年内</option>
+								</select>
+							</div>
+						</div>
+						<div class="tr">
+							<div class="th">文件夹：</div>
+							<div class="txt">
+								<select class="settime">
+									<option selected="selected">全部</option>
+									<option>收件夹</option>
+									<option>星标邮件</option>
+									<option>草稿夹</option>
+									<option>已发送</option>
+									<option>订阅邮件</option>
+									<option>已删除</option>
+									<option>垃圾邮件</option>
+									<option>所有邮件</option>
+									<option>网站通知</option>
+									<option>商讯信息</option>
+								</select>
+							</div>
+						</div>
+						<div class="tr">
+							<div class="th">已读/未读：</div>
+							<div class="txt">
+								<select class="settime">
+									<option selected="selected">全部</option>
+									<option>已读</option>
+									<option>未读</option>
+								</select>
+							</div>
+						</div>
+						<div class="tr">
+							<div class="th">是否带附件：</div>
+							<div class="txt">
+								<select class="settime">
+									<option selected="selected">不限</option>
+									<option>带附件</option>
+									<option>不带附件</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="mailbtn">查找邮件</div>
+				</div>
 		</div>
 	</div>
 </body>
