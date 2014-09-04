@@ -22,7 +22,7 @@ $(function(){
 		$(".wui_Dialog").show();
 		$(".mb").show();
 	});
-	$(".close").click(function(){
+	$(".close1").click(function(){
 		$(".wui_Dialog").hide();
 		$(".mb").hide();
 	});
@@ -38,6 +38,28 @@ $(function(){
 	});
 
 	$(".default2").click(function(){
+		var db1=$(this).parent().parent().parent().prev().length;
+		if(db1==1){
+			var db2=$(this).parent().parent().parent().prev().prev().length;
+			if(db2==1){
+				var sb1=$(this).parent().parent().parent().prev().prev().find(".default2").attr("yon")
+				var sb2=$(this).parent().parent().parent().prev().find(".default2").attr("yon")
+				var sb=$(this).attr("yon");
+			}else{
+				var sb=$(this).attr("yon");
+				var sb1=$(this).parent().parent().parent().prev().find(".default2").attr("yon")
+				var sb2=$(this).parent().parent().parent().next().find(".default2").attr("yon")
+			};
+		}else{
+			var sb=$(this).attr("yon");
+			var sb1=$(this).parent().parent().parent().next().next().find(".default2").attr("yon")
+			var sb2=$(this).parent().parent().parent().next().find(".default2").attr("yon")
+		};
+		if(sb==0 && sb1==1 && sb2==1){
+			$("*").find(".first").css("width","143px");
+		}else{
+			$("*").find(".first").css("width","");
+		}
 		var yon=$(this).attr("yon");
 		if(yon==1){
 			$(this).parent().parent().find(".normal").hide();
@@ -51,8 +73,6 @@ $(function(){
 			$(this).parent().parent().find(".normalLine").show();
 		}
 	});
-
-
 
 });
 
